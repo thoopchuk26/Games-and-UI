@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="play.GameChoice">
+   <top>
+      <HBox prefHeight="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="name_enter" promptText="ENTER NAME" />
+            <Button mnemonicParsing="false" onAction="#name_change" text="SUBMIT" />
+            <GridPane translateX="50.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="score" text="Score:" GridPane.columnIndex="2" />
+                  <TextField fx:id="name" text="Name:" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="TIC-TAC-TOE" translateY="25.0" />
+            <Label text="(Two Player)" translateY="25.0" />
+            <Button mnemonicParsing="false" onAction="#ticCreate" text="Button" translateY="25.0" />
+            <Label text="ROSHAMBO" translateY="75.0" />
+            <Label text="(Single Player)" translateY="75.0" />
+            <Button mnemonicParsing="false" onAction="#roshamboCreate" text="Button" translateY="75.0" />
+            <Label text="CONNECT4" translateY="125.0" />
+            <Label text="(Under Repair)" translateY="125.0" />
+            <Button mnemonicParsing="false" onAction="#connect4" text="Button" translateY="125.0" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="GameSpace" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
